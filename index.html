@@ -4,25 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mes outils</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <script id="config" type="application/json">
 {
   "titre": "Mes outils",
   "sous_titre": "Liens vers mes projets",
   "theme": "jour",
-  "couleurs": {},
-  "base": "https://USERNAME.github.io/",
+  "couleurs": {
+    "--bg": "#f4f4f6",
+    "--panel": "#ffffff",
+    "--line": "#d8d8de",
+    "--ink": "#1c1c20",
+    "--muted": "#6a6a72",
+    "--accent": "#6b4d96",
+    "--marche": "#b9742a"
+  },
+  "base": "https://KilianGir.github.io/",
   "sections": [
     {
-      "nom": "Projets",
+      "nom": "Mes outils",
       "outils": [
-        { "nom": "Outil 1", "desc": "Description courte de l'outil", "url": "mon-premier-repo" },
-        { "nom": "Outil 2", "desc": "Description courte de l'outil", "url": "mon-deuxieme-repo" }
+        {
+          "nom": "Lightable",
+          "desc": "Keyboard-driven photo triage tool",
+          "url": "lightable"
+        },
+        {
+          "nom": "Atelier formations",
+          "desc": "Lecteur de formations interactives",
+          "url": "atelier-formations"
+        },
+        {
+          "nom": "Meal builder",
+          "desc": "Browser-based meal composer",
+          "url": "meal-builder"
+        }
       ]
     },
     {
-      "nom": "Autres",
+      "nom": "Mes jeux",
       "outils": [
-        { "nom": "Outil 3", "desc": "Description courte de l'outil", "url": "mon-troisieme-repo" }
+        {
+          "nom": "Culture GO",
+          "desc": "Jeu de cartes géolocalisé",
+          "url": "culturego"
+        }
       ]
     }
   ],
@@ -46,6 +72,8 @@
   header{border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:48px;
     display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap}
   .brand h1{font-size:46px; letter-spacing:.22em; font-weight:600; color:var(--accent)}
+  .brand{display:flex; align-items:center; gap:16px}
+  .logo{height:52px; width:auto; flex-shrink:0}
   .brand p{font-family:"SF Mono",ui-monospace,Menlo,monospace; font-size:12px;
     letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:8px}
   .gear{background:var(--panel); border:1px solid var(--line); color:var(--accent);
@@ -206,8 +234,11 @@
 <div class="wrap">
   <header>
     <div class="brand">
-      <h1 id="t">Mes outils</h1>
-      <p id="st">Liens vers mes projets</p>
+      <img src="logo.png" alt="Logo" class="logo">
+      <div>
+        <h1 id="t">Mes outils</h1>
+        <p id="st">Liens vers mes projets</p>
+      </div>
     </div>
     <button class="gear" id="gear" title="Paramètres" aria-label="Paramètres">✦</button>
   </header>
